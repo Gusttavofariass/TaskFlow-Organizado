@@ -1,0 +1,55 @@
+body {
+  background: url("./Img/fundo.png") no-repeat center center/cover;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #8B0000;
+  padding: 30px;
+  border-radius: 15px;
+  width: 400px;
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-box label {
+  margin-bottom: 5px;
+}
+
+select, input[type="checkbox"] {
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+}
+
+.btn {
+  background: #A0522D;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  width: 100%;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #7a3a20;
+}
