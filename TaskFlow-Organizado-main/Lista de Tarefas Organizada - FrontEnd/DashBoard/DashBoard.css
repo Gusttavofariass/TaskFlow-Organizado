@@ -1,19 +1,24 @@
+/* Fundo fixo */
 body {
-  background: url("./img/fundo.png") no-repeat center center/cover;
+  background: url("Img/fundo\ \(2\).png") no-repeat center center fixed;
+  background-size: cover;
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
+/* Container principal */
 .container {
   max-width: 480px;
   margin: 40px auto;
-  background: #8B0000;
+  background: rgba(20, 20, 20, 0.85); /* Preto translúcido */
   border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
   padding: 32px 24px;
 }
 
+/* Cabeçalho */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,49 +28,36 @@ header {
 
 h1 {
   font-size: 2rem;
-  color: #fff;
+  color: #b37bff; /* Roxo claro */
   margin: 0;
 }
 
 h2 {
   font-size: 1.2rem;
-  color: #ffff;
+  color: #e0d1ff;
   margin-bottom: 16px;
 }
 
+/* Botões */
 .btn {
-  background: #A0522D;
+  background: linear-gradient(135deg, #6a0dad, #9b30ff);
   color: #fff;
   border: none;
   border-radius: 6px;
   padding: 8px 18px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background 0.2s;
   text-decoration: none;
   display: inline-block;
-}
-
-.btn.enviar {
-  background: #A0522D;
-}
-
-.btn.cancelar {
-  background: #e74c3c;
-}
-
-.btn:disabled,
-input:disabled {
-  background: #dbe2ef;
-  color: #A0522D;
-  cursor: not-allowed;
-  opacity: 0.7;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .btn:hover:enabled {
-  background: #A0522D;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #9b30ff;
 }
 
+/* Formulário */
 #form-tarefa {
   display: flex;
   gap: 8px;
@@ -75,12 +67,14 @@ input:disabled {
 #nova-tarefa {
   flex: 1;
   padding: 8px;
-  border: 1px solid #dbe2ef;
+  border: 1px solid #9b30ff;
   border-radius: 6px;
   font-size: 1rem;
-  background: #f4f6fc;
+  background: #1e1e1e;
+  color: #fff;
 }
 
+/* Lista de tarefas */
 #lista-tarefas {
   list-style: none;
   padding: 0;
@@ -88,11 +82,11 @@ input:disabled {
 }
 
 #lista-tarefas li {
-  background: #eaf0fb;
+  background: rgba(155, 48, 255, 0.1);
   margin-bottom: 8px;
   padding: 10px 14px;
   border-radius: 6px;
-  color: #A0522D;
+  color: #fff;
   font-size: 1rem;
-  box-shadow: 0 1px 4px rgba(79,140,255,0.05);
+  border-left: 3px solid #9b30ff;
 }
