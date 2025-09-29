@@ -1,14 +1,25 @@
+@media (max-width: 500px) {
+  main.container {
+    max-width: 95vw;
+    padding: 16px 4vw;
+  }
+}
+
 body {
-  background: url("./img/fundo.png") no-repeat center center/cover;
+  background: url("./img/fundo.png") no-repeat;
   font-family: 'Segoe UI', Arial, sans-serif;
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
+main.container {
+  flex: 1;
   max-width: 480px;
   margin: 40px auto;
-  background: #8B0000;
+  background: #8b0000;
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   padding: 32px 24px;
@@ -29,47 +40,67 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
-  color: #ffff;
+  color: #ffffff;
   margin-bottom: 16px;
 }
 
-.btn {
-  background: #A0522D;
-  color: #fff;
+.btn{
+  padding: 10px 24px;
   border: none;
-  border-radius: 6px;
-  padding: 8px 18px;
+  border-radius: 24px;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
-  transition: background 0.2s;
-  text-decoration: none;
-  display: inline-block;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  outline: none;
 }
 
 .btn.enviar {
-  background: #A0522D;
+ background: linear-gradient(90deg, #009688 0%, #43cea2 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,150,136,0.15);
+}
+
+.btn.enviar:hover:enabled {
+  background: linear-gradient(90deg, #43cea2 0%, #009688 100%);
+  transform: scale(1.07);
 }
 
 .btn.cancelar {
   background: #e74c3c;
 }
 
-.btn:disabled,
-input:disabled {
+.btn:disabled,input {
   background: #dbe2ef;
   color: #A0522D;
-  cursor: not-allowed;
-  opacity: 0.7;
 }
 
-.btn:hover:enabled {
+.btn:hover {
   background: #A0522D;
+}
+
+.btn.sair {
+  background: linear-gradient(90deg, #8b0000 0%, #ff6f61 100%);
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(139,0,0,0.15);
+}
+
+.btn.sair:hover {
+  background: linear-gradient(90deg, #ff6f61 0%, #8b0000 100%);
+  transform: scale(1.07);
+}
+
+.btn:focus {
+  outline: 2px solid #43cea2;
+  outline-offset: 2px;
 }
 
 #form-tarefa {
   display: flex;
   gap: 8px;
-  margin-top: 18px;
+  margin-top: 10px; 
+  margin-bottom: 0px; 
 }
 
 #nova-tarefa {
@@ -81,10 +112,17 @@ input:disabled {
   background: #f4f6fc;
 }
 
+#nova-tarefa:focus {
+  border-color: #009688;
+  box-shadow: 0 0 0 2px #43cea233;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
 #lista-tarefas {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 8px 0;
+  max-height: 220px; 
+  overflow-y: auto;
+  margin-bottom: 8px;
+  padding-right: 4px; 
 }
 
 #lista-tarefas li {
@@ -96,3 +134,22 @@ input:disabled {
   font-size: 1rem;
   box-shadow: 0 1px 4px rgba(79,140,255,0.05);
 }
+
+footer{
+    background-color: #8b0000;
+    font-size: 0.9rem;
+    font-family: var(--font-family-text, 'Charlie Text', sans-serif)var(--font-family-text, 'Charlie Text', sans-serif);
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}
+
+footer a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
