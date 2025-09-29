@@ -5,18 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const greeting = document.createElement('p');
   const hour = new Date().getHours();
 
+  let message;
+  if (hour < 12) {
+    message = "Bom dia!";
+  } else if (hour < 18) {
+    message = "Boa tarde!";
+  } else {
+    message = "Boa noite!";
+  }
+
+  greeting.textContent = message;
   greeting.style.fontSize = '22px';
   greeting.style.marginBottom = '20px';
-  document.querySelector('.home-container').prepend(greeting);
-
-  const buttons = document.querySelectorAll('.btn');
-  buttons.forEach(btn => {
-    btn.addEventListener('mouseenter', () => {
-      btn.style.transform = 'scale(1.05)';
-      btn.style.transition = 'all 0.3s ease';
-    });
-    btn.addEventListener('mouseleave', () => {
-      btn.style.transform = 'scale(1)';
-    });
-  });
+  greeting.style.fontWeight = '500';
+  container.insertBefore(greeting, container.children[1]);
 });
