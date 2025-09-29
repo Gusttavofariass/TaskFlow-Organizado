@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redefinir Senha | TaskFlow</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon_io (3)/TaskFlow2.ico" type="image/x-icon">
+  <link rel="stylesheet" href="RedefinirSenha.css">
+  <script src="redefinirSenha.js" defer></script>
+</head>
+
+<body>
+  <main class="container">
+    <form onsubmit="redefinirSenha(event)">
+      <h1>Redefinir Senha</h1>  
+
+      <p class="descricao">
+        Digite sua nova senha e confirme para redefinir o acesso à sua conta.
+      </p> 
+
+      <div class="input-box">
+        <input id="novaSenha" name="novaSenha" type="password" placeholder="Nova Senha" minlength="6" required>
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <div class="input-box">
+        <input id="confirmarSenha" name="confirmarSenha" type="password" placeholder="Confirmar Nova Senha" minlength="6" required>
+        <i class="bx bxs-lock"></i>
+      </div>
+
+      <button type="submit" class="btn enviar">Redefinir Senha</button>
+
+  <script>
+    function redefinirSenha(event) {
+      event.preventDefault();
+
+      const novaSenha = document.getElementById("novaSenha").value.trim();
+      const confirmarSenha = document.getElementById("confirmarSenha").value.trim();
+
+      if (novaSenha.length < 6) {
+        alert("A senha deve ter no mínimo 6 caracteres.");
+        return;
+      }
+
+      if (novaSenha !== confirmarSenha) {
+        alert("As senhas não coincidem. Tente novamente.");
+        return;
+      }
+
+      alert("Senha redefinida com sucesso!");
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+
+</html>
