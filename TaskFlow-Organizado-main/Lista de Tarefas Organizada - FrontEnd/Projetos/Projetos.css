@@ -1,36 +1,36 @@
-/* Reset e fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
-  background-color: #f0f4f8;
-  color: #333;
+  background: url("Img/fundo\ \(2\).png") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
   line-height: 1.6;
 }
 
-/* Header */
 header {
-  background-color: #4f46e5;
-  color: white;
+  background: rgba(20,20,20,0.9);
   padding: 2rem 1rem;
   text-align: center;
+  border-bottom: 2px solid #9b30ff;
 }
 
 header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  color: #b37bff;
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #d1d5db;
+  font-size: 1.1rem;
+  color: #ccc;
 }
 
-/* Container */
 .container {
   max-width: 1200px;
   margin: 2rem auto;
@@ -43,118 +43,33 @@ header p {
   gap: 2rem;
 }
 
-/* Project Cards */
 .project-card {
-  background-color: white;
+  background: rgba(30,30,30,0.9);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
   padding: 1.5rem;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #9b30ff33;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 0 20px #9b30ff66;
 }
 
 .project-card h3 {
   font-size: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #4f46e5;
+  color: #9b30ff;
 }
 
 .project-card p {
-  font-size: 1rem;
+  font-size: 0.95rem;
   margin-bottom: 1rem;
-  color: #555;
+  color: #ddd;
 }
 
 .project-card .technologies {
-  font-size: 0.9rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
-.project-card button {
-  padding: 0.5rem 1rem;
-  background-color: #4f46e5;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.project-card button:hover {
-  background-color: #3730a3;
-}
-
-/* Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: white;
-  margin: 10% auto;
-  padding: 2rem;
-  border-radius: 1rem;
-  max-width: 600px;
-  position: relative;
-}
-
-.modal-content h2 {
-  color: #4f46e5;
-  margin-bottom: 1rem;
-}
-
-.modal-content ul {
-  margin: 1rem 0;
-  padding-left: 1.2rem;
-}
-
-.modal-content .project-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background-color: #4f46e5;
-  color: white;
-  border-radius: 0.5rem;
-  text-decoration: none;
-  transition: background-color 0.3s;
-}
-
-.modal-content .project-link:hover {
-  background-color: #3730a3;
-}
-
-.close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* Responsividade */
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 2rem;
-  }
-
-  header p {
-    font-size: 1rem;
-  }
-
-  .modal-content {
-    margin: 20% 1rem;
-  }
+  font-size: 0.8rem;
+  color: #b37bff;
 }

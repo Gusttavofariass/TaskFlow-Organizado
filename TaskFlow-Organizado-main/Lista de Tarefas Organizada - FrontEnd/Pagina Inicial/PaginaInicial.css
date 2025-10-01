@@ -10,19 +10,58 @@
 body {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  /* Fundo fixo degradê roxo */
+  flex-direction: column;
   background: linear-gradient(135deg, #1a0026, #3b0a57, #6a0dad);
   background-attachment: fixed;
   color: #fff;
 }
 
-.login-container {
+.navbar {
   width: 100%;
+  padding: 15px 40px;
+  background: rgba(20, 20, 20, 0.85);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 600;
+  color: #bb86fc;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #bb86fc;
+}
+
+.login-container {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 20px;
 }
 
 .login-box {
@@ -83,6 +122,37 @@ body {
   color: #aaa;
 }
 
+/* 🔹 Estilo do lembrar/esqueci senha */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: -10px 0 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.options input[type="checkbox"] {
+  accent-color: #bb86fc; /* cor do check */
+}
+
+.options .forgot-password {
+  color: #bb86fc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.options .forgot-password:hover {
+  text-decoration: underline;
+}
+
 .btn {
   width: 100%;
   padding: 14px;
@@ -92,6 +162,7 @@ body {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: 10px;
 }
 
 .login-btn {
@@ -103,6 +174,25 @@ body {
 .login-btn:hover {
   background: linear-gradient(90deg, #bb86fc, #6a0dad);
   box-shadow: 0 0 20px rgba(187,134,252,0.9);
+}
+
+.google-btn {
+  background: #fff;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.google-btn:hover {
+  background: #f0f0f0;
+}
+
+.google-btn .google-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .register-link {

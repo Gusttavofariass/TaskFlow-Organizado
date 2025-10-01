@@ -9,7 +9,6 @@ document.getElementById("recuperarform").addEventListener("submit", function(eve
     window.location.href = "Pagina De Login.html";  
   });
   
-  //redireciona pro redefinir senha
   document.getElementById("recuperarform").addEventListener("submit", function(event) {
     event.preventDefault(); 
   });

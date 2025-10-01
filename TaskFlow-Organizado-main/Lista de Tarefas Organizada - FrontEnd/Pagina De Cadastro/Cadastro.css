@@ -7,7 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Fundo fixo */
 body {
   display: flex;
   justify-content: center;
@@ -18,10 +17,9 @@ body {
   flex-direction: column;
 }
 
-/* Container */
 .container {
   width: 420px;
-  background: rgba(20, 20, 20, 0.9); /* preto translúcido */
+  background: rgba(20, 20, 20, 0.9);
   border-radius: 16px;
   color: #fff;
   padding: 40px 32px;
@@ -36,7 +34,6 @@ body {
   color: #b37bff;
 }
 
-/* Inputs */
 .input-box {
   position: relative;
   width: 100%;
@@ -69,7 +66,6 @@ body {
   color: #b37bff;
 }
 
-/* Botão */
 .btn {
   width: 100%;
   padding: 14px;
@@ -89,7 +85,6 @@ body {
   box-shadow: 0 0 12px #9b30ff;
 }
 
-/* Link para login */
 .register-link {
   text-align: center;
   margin-top: 20px;
@@ -106,14 +101,14 @@ body {
   text-decoration: underline;
 }
 
-/* Footer */
 footer {
   width: 100%;
   background: #111;
   color: #ccc;
   text-align: center;
-  padding: 12px 0;
+  padding: 20px 0;
   margin-top: 40px;
+  margin-bottom: -60px;
 }
 
 footer p {
