@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login | TaskFlow</title>
-  <link rel="stylesheet" href="Login.css">
-  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <script src="Login.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaskFlow - Login</title>
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="icon" href="icon/taskflow icon.png" type="image/png">
+  <link rel="stylesheet" href="PaginaInicial.css"/>
 </head>
-
 <body>
-  <main class="container">
-    <form id="loginForm">
-      <h1>Login TaskFlow</h1>
 
-      <div class="input-box">
-        <input placeholder="Email" type="email" required>
-        <i class="bx bxs-user"></i>
-      </div>
+  <nav class="navbar">
+    <div class="logo"><i class="bx bx-task"></i> TaskFlow</div>
+    <ul class="nav-links">
+      <li><a href="../Pagina Inicial/PaginaInicial.html">Início</a></li>
+      <li><a href="../Projetos/Projetos.html">Projetos</a></li>
+      <li><a href="../Perfil/Perfil.html">Perfil</a></li>
+      <li><a href="../Sobre Nós/SobreNos.html">Sobre Nós</a></li>
+      <li><a href="../Pagina De Cadastro/Cadastro.html">Cadastro</a></li>
+      <li><a href="../Equipe/Equipe.html">Equipe</a></li>
+    </ul>
+  </nav>
 
-      <div class="password-container">
-        <input placeholder="Senha" type="password" required>
-        <i class="bx bxs-lock-alt" id="togglePassword"></i>
-      </div>
+  <div class="login-container">
+    <div class="login-box">
+      <h1><i class="bx bx-task"></i> TaskFlow</h1>
+      <p class="subtitle">Entre para organizar suas tarefas</p>
 
-      <div class="remember-forgot">
-        <label>
-          <input type="checkbox">
-          Lembrar minha senha
-        </label>
-        <a href="../Recuperar Senha/RecuperarSenha.html">Esqueci a senha</a>
-      </div>
+      <form action="#" method="post">
+        <div class="input-group">
+          <i class="bx bx-user"></i>
+          <input type="email" placeholder="E-mail" required>
+        </div>
 
-      <button type="submit" class="btn">Entrar</button>
+        <div class="input-group">
+          <i class="bx bx-lock"></i>
+          <input type="password" placeholder="Senha" required>
+        </div>
 
-      <div class="register-link">
-        <p>Não tem uma conta? <a href="../Pagina De Cadastro/Cadastro.html">Cadastre-se</a></p>
-      </div>
-    </form>
-  </main>
+        <div class="options">
+          <label>
+            <input type="checkbox"> Lembrar minha senha
+          </label>
+          <a href="../Recuperar Senha/RecuperarSenha.html">Esqueci a senha</a>        
+</div>
+        <button type="submit" class="btn login-btn">Entrar</button>
+      </form>
+
+      <button class="btn google-btn">
+        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" class="google-icon"/>
+        Entrar com Google
+      </button>
+
+      <p class="register-link">
+        Não tem conta? <a href="../Pagina De Cadastro/Cadastro.html">Cadastre-se</a>
+      </p>
+    </div>
+  </div>
+
 </body>
 </html>
