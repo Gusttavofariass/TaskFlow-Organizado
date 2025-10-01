@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
 * {
   margin: 0;
@@ -14,6 +14,7 @@ body {
   background: linear-gradient(135deg, #1a0026, #3b0a57, #6a0dad);
   background-attachment: fixed;
   color: #fff;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -56,157 +57,160 @@ body {
   color: #bb86fc;
 }
 
-.login-container {
+.nav-links li a.active {
+  color: #bb86fc;
+  font-weight: 600;
+}
+
+.hero {
   flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
-}
-
-.login-box {
-  background: rgba(20, 20, 20, 0.9);
-  padding: 40px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+  padding: 80px 20px;
   text-align: center;
-  width: 100%;
-  max-width: 400px;
-  backdrop-filter: blur(10px);
 }
 
-.login-box h1 {
-  font-size: 28px;
+.hero-content h1 {
+  font-size: 2.8rem;
   font-weight: 700;
+  line-height: 1.2;
   color: #bb86fc;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
-.subtitle {
-  font-size: 16px;
-  margin-bottom: 30px;
+.hero-subtitle {
+  font-size: 1.2rem;
   color: #ddd;
+  max-width: 600px;
+  margin: 0 auto 30px;
 }
 
-.input-group {
+.hero-buttons {
   display: flex;
-  align-items: center;
-  background: #1e1e1e;
-  border-radius: 10px;
-  margin-bottom: 20px;
-  padding: 12px 15px;
-  border: 1px solid #2b0040;
-  transition: border 0.3s ease;
-}
-
-.input-group:hover {
-  border-color: #bb86fc;
-}
-
-.input-group i {
-  color: #bb86fc;
-  margin-right: 10px;
-  font-size: 18px;
-}
-
-.input-group input {
-  border: none;
-  outline: none;
-  background: transparent;
-  width: 100%;
-  font-size: 15px;
-  color: #fff;
-}
-
-.input-group input::placeholder {
-  color: #aaa;
-}
-
-/* 🔹 Estilo do lembrar/esqueci senha */
-.options {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: -10px 0 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.options label {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-}
-
-.options input[type="checkbox"] {
-  accent-color: #bb86fc; /* cor do check */
-}
-
-.options .forgot-password {
-  color: #bb86fc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.options .forgot-password:hover {
-  text-decoration: underline;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .btn {
-  width: 100%;
-  padding: 14px;
+  padding: 14px 28px;
   border: none;
   border-radius: 10px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-.login-btn {
+.btn-primary {
   background: linear-gradient(90deg, #6a0dad, #bb86fc);
   color: #fff;
   box-shadow: 0 0 10px rgba(187,134,252,0.6);
 }
 
-.login-btn:hover {
+.btn-primary:hover {
   background: linear-gradient(90deg, #bb86fc, #6a0dad);
   box-shadow: 0 0 20px rgba(187,134,252,0.9);
+  transform: translateY(-2px);
 }
 
-.google-btn {
-  background: #fff;
-  color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-weight: 600;
-}
-
-.google-btn:hover {
-  background: #f0f0f0;
-}
-
-.google-btn .google-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.register-link {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.register-link a {
+.btn-outline {
+  background: transparent;
   color: #bb86fc;
-  font-weight: 600;
-  text-decoration: none;
+  border: 2px solid #bb86fc;
+  box-shadow: none;
 }
 
-.register-link a:hover {
-  text-decoration: underline;
+.btn-outline:hover {
+  background: rgba(187,134,252,0.1);
+  transform: translateY(-2px);
+}
+
+.benefits-section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.benefits-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #bb86fc;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.benefit-card {
+  background: rgba(20, 20, 20, 0.8);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+}
+
+.benefit-card .icon {
+  font-size: 2.5rem;
+  color: #bb86fc;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: #ddd;
+  line-height: 1.5;
+}
+
+.cta-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+}
+
+.cta-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  color: #bb86fc;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  color: #ddd;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
 }
