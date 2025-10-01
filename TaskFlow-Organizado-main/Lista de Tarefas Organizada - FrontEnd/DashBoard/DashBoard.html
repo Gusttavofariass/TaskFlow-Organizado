@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Dashboard | TaskFlow</title>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="Dashboard.css">
@@ -10,21 +10,25 @@
 </head>
 <body>
   <main class="container">
-    <header>
-      <h1>Bem-vindo ao TaskFlow!</h1>
-      <a href="../Pagina Inicial/PaginaInicial.html" class="btn">Sair</a>
-    </header>
-
-    <section>
-      <h2>Suas Tarefas</h2>
-      <ul id="lista-tarefas"></ul>
-      <form id="form-tarefa">
-        <input type="text" id="nova-tarefa" placeholder="Adicionar nova tarefa..." disabled>
-        <button type="button" class="btn enviar" disabled>Adicionar</button>
-      </form>
-    </section>
+    <div class="card">
+      <header>
+        <h1>Bem-vindo ao TaskFlow!</h1>
+        <a href="../Pagina De Login/Login.html" class="btn sair">Sair</a>
+      </header>
+      <section>
+        <h3>Suas Tarefas</h3>
+        <ul id="lista-tarefas"></ul>
+        <form id="form-tarefa">
+          <input type="text" id="nova-tarefa" placeholder="Adicionar nova tarefa...">
+          <button type="button" class="btn enviar" id="btn-adicionar">Adicionar</button>
+        </form>
+      </section>
+    </div>
   </main>
   
   <script src="dashboard.js"></script>
 </body>
+<footer>
+    <p>© 2025 - TaskFlow | <a href="../Fale Conosco/Faleconosco.html">Fale Conosco</a></p>
+  </footer>
 </html>
