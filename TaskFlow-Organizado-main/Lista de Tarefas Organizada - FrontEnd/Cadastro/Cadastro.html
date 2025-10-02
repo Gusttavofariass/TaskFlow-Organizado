@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro | TaskFlow</title>
+  <link rel="stylesheet" href="Cadastro.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="icon" href="icon/taskflow icon.png" type="image/png">
+</head>
+
+<body>
+  <main class="container">
+    <form onsubmit="cadastrarUsuario(event)">
+      <h1>Criar Conta</h1>
+
+      <div class="input-box">
+        <input type="text" placeholder="Nome completo" required>
+        <i class="bx bxs-user"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="email" placeholder="Email" required>
+        <i class="bx bxs-envelope"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Senha" minlength="6" required>
+        <i class="bx bxs-lock-alt"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" placeholder="Confirmar senha" minlength="6" required>
+        <i class="bx bxs-lock"></i>
+      </div>
+
+      <button type="submit" class="btn">Cadastrar</button>
+
+      <div class="register-link">
+        <p>Já tem uma conta? <a href="../Login/Login.html">Entrar</a></p>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>Conheça mais sobre nossa equipe e nossa missão.</p>
+    <a href="../Sobre Nós/SobreNos.html" class="footer-link">Sobre Nós</a>
+  </footer>
+
+  <script>
+    function cadastrarUsuario(event) {
+      event.preventDefault();
+      alert("Cadastro realizado com sucesso!");
+      window.location.href = "..";
+    }
+
+    function loginGoogle() {
+      alert("Login com Google (Tem que integrar api cabaço)");
+    }
+  </script>
+</body>
+</html>
